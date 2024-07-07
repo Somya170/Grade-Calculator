@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Calculator</title>
+    <script>
+        function validateMarks(input) {
+            if (input.value < 0 || input.value > 100) {
+                alert("Marks should be between 0 and 100");
+                input.value = ""; // Clear the input field
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="StudentGradeServlet" method="post">
+        <label for="subject1">Subject 1 Marks:</label>
+        <input type="number" id="subject1" name="subject1" required oninput="validateMarks(this)">
+        <br><br>
+        <label for="subject2">Subject 2 Marks:</label>
+        <input type="number" id="subject2" name="subject2" required oninput="validateMarks(this)">
+        <br><br>
+        <label for="subject3">Subject 3 Marks:</label>
+        <input type="number" id="subject3" name="subject3" required oninput="validateMarks(this)">
+        <br><br>
+        <label for="subject4">Subject 4 Marks:</label>
+        <input type="number" id="subject4" name="subject4" required oninput="validateMarks(this)">
+        <br><br>
+        <label for="subject5">Subject 5 Marks:</label>
+        <input type="number" id="subject5" name="subject5" required oninput="validateMarks(this)">
+        <br><br>
+        <input type="submit" value="Calculate Grades">
+    </form>
+</body>
+</html>
